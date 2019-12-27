@@ -1,0 +1,553 @@
+@charset "utf-8";
+
+html {
+	font-size: 10px;
+}
+
+body {
+	font-family: 'Nanum Gothic', sans-serif;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background-color: #f2f2f2;
+}
+
+header {
+	width: 100%;
+	height: 580px;
+	position: relative;
+	background: url("../images/mcm/top/bg_img1.jpg") no-repeat;
+	background-size: 100% 100%;
+	cursor: pointer;
+}
+
+header .txt-con {
+	width: 100%;
+	/*	background-color: palevioletred;*/
+	text-align: right;
+	position: absolute;
+	right: 26px;
+	bottom: 0px;
+	color: #fff;
+}
+
+header .txt-con h1 {
+	display: inline-block;
+	width: 270px;
+	height: 35px;
+	line-height: 35px;
+	background-color: #fff;
+	font-weight: 700;
+	font-size: 2rem;
+	margin-bottom: 3%;
+	text-align: center;
+	color: #080808;
+}
+
+header .txt-con p:nth-of-type(1) {
+	font-size: 3.5rem;
+	font-weight: 700;
+	margin-bottom: 2%;
+	color: #f2f2f2;
+	text-shadow: 1px 1px 4px #080808;
+}
+
+header .txt-con p:nth-of-type(2) {
+	font-size: 1.6rem;
+	font-weight: bold;
+	color: #f2f2f2;
+}
+
+header .txt-con span {
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	padding: 80px 0 20px 0;
+	font-size: 2.6rem;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+header .top-con {
+	width: 100%;
+	height: 90px;
+	position: relative;
+}
+
+header .top-con .logo-wrap {
+	line-height: 90px;
+	text-align: center;
+}
+
+header .top-con .logo-wrap img {
+	vertical-align: middle;
+}
+
+header .top-con .top-icon {
+	position: absolute;
+	top: 10px;
+	height: 25px;
+	right: 20px;
+}
+
+header .top-con .top-icon ul {
+	overflow: hidden;
+}
+
+header .top-con .top-icon ul li {
+	float: left;
+	width: 45px;
+	text-align: center;
+	font-size: 2.2rem;
+	font-weight: bold;
+}
+
+header .top-con .top-icon ul li img {
+	vertical-align: sub;
+}
+
+header .top-con .top-icon ul li:nth-child(3) {
+	line-height: 25px;
+}
+
+header .top-con .btn-con {
+	position: fixed;
+	top: 15px;
+	left: 20px;
+	z-index: 10;
+}
+
+header .top-con .btn-con .menu-btn {
+	display: block;
+	width: 35px;
+	height: 3px;
+	background-color: #000;
+	margin: 7px;
+}
+
+.first-wrap {
+	width: 100%;
+	height: 676px;
+	position: relative;
+}
+
+.first-wrap .txt-con {
+	width: 100%;
+	text-align: center;
+	padding-top: 50px;
+}
+
+.first-wrap .txt-con h2 {
+	font-size: 3.7rem;
+	font-weight: bold;
+	margin-bottom: 20px;
+	color: #080808;
+}
+
+.first-wrap .txt-con p {
+	font-size: 2.2rem;
+	margin-bottom: 15px;
+	color: #080808;
+}
+
+.first-wrap .txt-con p:last-child {
+	margin-bottom: 0;
+}
+
+.first-wrap .first-con {
+	width: 100%;
+	padding-top: 20px;
+}
+
+.first-wrap .first-con ul {
+	overflow: hidden;
+}
+
+.first-wrap .first-con ul li {
+	float: left;
+	width: 33.3%;
+	height: 330px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.first-wrap .first-con ul li img {
+	width: 150px;
+	vertical-align: top;
+}
+
+.first-wrap .first-con ul li:last-child {
+	margin-right: 0;
+}
+
+.first-wrap .first-con ul li p:first-of-type {
+	margin-top: 50px;
+}
+
+.first-wrap .first-con ul li p {
+	font-size: 1.8rem;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.first-wrap .first-con ul li span {
+	font-size: 1.8rem;
+}
+
+.first-wrap .first-btn {
+	position: relative;
+	width: 100%;
+	height: 57px;
+	margin-top: 50px;
+	cursor: pointer;
+}
+
+.first-wrap .first-btn span {
+	position: absolute;
+	display: block;
+	width: 180px;
+	height: 57px;
+	left: 50%;
+	transform: translateX(-50%);
+	line-height: 57px;
+	text-align: center;
+	font-size: 2.4rem;
+	color: #f2f2f2;
+	background-color: #000;
+}
+
+/*클래식제품끝*/
+.second-wrap {
+	width: 100%;
+	height: 847px;
+	background-color: darkgray;
+}
+
+.second-wrap .txt-con {
+	width: 100%;
+	text-align: center;
+	padding-top: 50px;
+}
+
+.second-wrap .txt-con h2 {
+	font-size: 3.7rem;
+	font-weight: bold;
+	margin-bottom: 15px;
+	color: #080808;
+}
+
+.second-wrap .txt-con p {
+	font-size: 2.2rem;
+	color: #080808;
+}
+
+.second-wrap .second-con {
+	width: 100%;
+	height: 477px;
+	overflow: hidden;
+	position: relative;
+	margin: 0 auto;
+	margin-top: 60px;
+}
+
+.second-wrap .second-con ul {
+	position: relative;
+	margin: 0 auto;
+}
+
+.second-wrap .second-con ul li {
+	position: absolute;
+	text-align: center;
+}
+
+.second-wrap .second-con ul li:nth-of-type(1) {
+	left: 94px;
+}
+
+.second-wrap .second-con ul li:nth-of-type(2) {
+	left: 576px;
+}
+
+.second-wrap .second-con ul li:nth-of-type(3) {
+	left: 1028px;
+}
+
+.second-wrap .second-con ul li:nth-of-type(4) {
+	left: -390px;
+}
+/*30*/
+
+/*작지만 의미있는 선물 끝*/
+.third-wrap {
+	width: 100%;
+	height: 668px;
+	margin: 0 auto;
+
+}
+
+.third-wrap .txt-con {
+	width: 100%;
+	text-align: center;
+	padding-top: 50px;
+}
+
+.third-wrap .txt-con h2 {
+	font-size: 3.7rem;
+	font-weight: bold;
+	margin-bottom: 15px;
+	color: #080808;
+}
+
+.third-wrap .txt-con p {
+	font-size: 2.2rem;
+	color: #080808;
+}
+
+.third-wrap .txt-con p:first-of-type {
+	margin-bottom: 10px;
+}
+
+.third-wrap .third-con {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.third-wrap .third-con ul {
+	overflow: hidden;
+}
+
+.third-wrap .third-con ul li {
+	float: left;
+	width: 40%;
+	margin-right: 115px;
+}
+
+.third-wrap .third-con ul li:nth-of-type(2) {
+	margin-right: 0;
+}
+
+.third-wrap .third-con .third-btn {
+	width: 192px;
+	height: 60px;
+	margin: 0 auto;
+	margin-top: 20px;
+	background-color: #080808;
+}
+
+.third-wrap .third-con .third-btn span {
+	line-height: 60px;
+	font-size: 2.4rem;
+	color: #f2f2f2;
+}
+
+/*
+.third-wrap .third-con ul li:first-child{
+	margin-right: 20px;
+}
+*/
+.third-wrap .third-con ul li p {
+	font-size: 2.2rem;
+	font-weight: bold;
+	margin: 20px 0 10px;
+	color: #080808;
+}
+
+.third-wrap .third-con ul li:nth-child(2) p:nth-of-type(2) {
+	margin-top: 0;
+}
+
+.third-wrap .third-con ul li span {
+	font-size: 2rem;
+	color: #080808;
+}
+
+.third-wrap .third-con ul li:first-child span:first-of-type {
+	text-decoration: line-through;
+}
+
+.third-wrap .third-con ul li:first-child span:nth-of-type(2) {
+	color: #c10000;
+	font-weight: bold;
+	margin-left: 10px;
+}
+
+/*여행필수아이템 끝*/
+.last-wrap {
+	width: 100%;
+	height: 727px;
+}
+
+.last-wrap .left-con {
+	float: left;
+	width: 47.5%;
+	height: 100%;
+	margin-right: 30px;
+	padding-left: 17px;
+	box-sizing: border-box;
+}
+
+.last-wrap .left-con .left-top {
+	width: 100%;
+	height: 350px;
+}
+
+.last-wrap .left-con .left-top img {
+	width: 100%;
+	height: 100%;
+}
+
+.last-wrap .left-con .left-bottom {
+	width: 100%;
+	padding-top: 60px;
+	text-align: center;
+}
+
+.last-wrap .left-con .left-bottom h1 {
+	font-size: 3.7rem;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.last-wrap .left-con .left-bottom p {
+	font-size: 2.2rem;
+	margin-bottom: 10px;
+}
+
+.last-wrap .left-con .left-bottom .left-btn {
+	width: 180px;
+	height: 57px;
+	margin: 0 auto;
+	margin-top: 30px;
+	background-color: #080808;
+	cursor: pointer;
+}
+
+.last-wrap .left-con .left-bottom .left-btn span {
+	display: inline-block;
+	line-height: 57px;
+	font-size: 2.6rem;
+	color: #f2f2f2;
+}
+
+/*그의선물*/
+.last-wrap .right-con {
+	float: left;
+	width: 47.5%;
+	height: 100%;
+	padding-right: 17px;
+	box-sizing: border-box;
+}
+
+.last-wrap .right-con .right-top {
+	width: 100%;
+	padding: 60px 0 30px;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.last-wrap .right-con .right-top h1 {
+	font-size: 3.7rem;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.last-wrap .right-con .right-top p {
+	font-size: 2.2rem;
+	margin-bottom: 10px;
+}
+
+.last-wrap .right-con .right-top .right-btn {
+	width: 180px;
+	height: 57px;
+	margin: 0 auto;
+	margin-top: 30px;
+	background-color: #080808;
+	cursor: pointer;
+}
+
+.last-wrap .right-con .right-top .right-btn span {
+	display: inline-block;
+	line-height: 57px;
+	font-size: 2.6rem;
+	color: #f2f2f2;
+}
+
+.last-wrap .right-con .right-bottom {
+	width: 100%;
+	height: 350px;
+}
+
+.last-wrap .right-con .right-bottom img {
+	width: 100%;
+	height: 100%;
+}
+
+/*그녀의 선물*/
+/*그의 선물 그녀의 선물 파트 끝*/
+.season-wrap {
+	width: 100%;
+	height: 360px;
+	position: relative;
+	background: url("../images/mcm/bgi_season.jpg") center;
+}
+
+.season-wrap span {
+	display: inline-block;
+	position: absolute;
+	bottom: 95px;
+	right: 50px;
+	color: #fff;
+	font-size: 3.8rem;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.season-wrap img {
+	position: absolute;
+	bottom: 70px;
+	right: 0px;
+}
+
+/*시즌오프 끝*/
+.info-wrap {
+	width: 100%;
+	height: 636px;
+	background-color: floralwhite;
+}
+
+/*정보파트 끝*/
+footer {
+	width: 100%;
+	height: 380px;
+	padding: 20px 10px 0 10px;
+	box-sizing: border-box;
+	background-color: #d9d9d9;
+	text-align: center;
+}
+
+footer p,
+span {
+	font-size: 1.7rem;
+}
+
+footer p:not(:last-child) {
+	margin-bottom: 15px;
+}
+
+footer span {
+	display: inline-block;
+	margin-bottom: 60px;
+}
+
+footer span:nth-of-type(2) {
+	font-weight: bold;
+	padding-left: 10px;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+footer p:last-child {
+	font-size: 1.6rem;
+}
+
+/*푸터끝*/
