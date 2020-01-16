@@ -127,7 +127,7 @@ $("document").ready(function(){
 				}
 			}
 				$("html, body").stop().animate({
-			scrollTop : offset[a]
+			scrollTop : $height * a
 		},1000)
 		}
 	})
