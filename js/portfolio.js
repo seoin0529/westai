@@ -46,10 +46,16 @@ function typing(){
 }  
 
 	
+$(window).resize(function(){
+	if($(window).width() > 650){
 $(".home").ripples({
 	resolution : 256,
 	perturbance : 0.04
 })	
+}
+})
+	
+
 	
 	
 	var $indi =$(".indicator ul li"),
@@ -196,6 +202,7 @@ $(".home").ripples({
 		spaceBetween : 0,
 		speed :1500,
 		loop :false,
+		swiper: true,
 		navigation:{
 			nextEl : ".swiper-button-next",
 			prevEl : ".swiper-button-prev"
