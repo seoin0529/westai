@@ -41,6 +41,7 @@ body {
 	z-index: 10;
 	cursor: pointer;
 	z-index: 30;
+/*	display: none;*/
 }
 
 .section_wrap .nav .nav_btn .btn {
@@ -78,6 +79,8 @@ body {
 	margin-top: -4px;
 	transform: rotate(135deg);
 }
+
+
 
 .section_wrap .nav .nav_wrap {
 	position: fixed;
@@ -187,7 +190,7 @@ body {
 .section_wrap .profile .pro_wrap .left_wrap {
 	float: left;
 	position: relative;
-	margin-right: 4.5%;
+	margin-right: 20px;
 	box-sizing: border-box;
 	width: 30%;
 	text-align: center;
@@ -202,6 +205,8 @@ body {
 	width: 60%;
 	position: relative;
 	padding-top: 5%;
+	margin-bottom: 20px;
+	
 }
 
 .section_wrap .profile .pro_wrap .left_wrap .pro_btn span {
@@ -542,6 +547,7 @@ body {
 	font-size: 10rem;
 	cursor: pointer;
 	color: #080808;
+	color: #080808;
 	z-index: 1001;
 }
 
@@ -613,8 +619,8 @@ body {
 .section_wrap .indicator ul li {
 	height: 40px;
 	line-height: 40px;
-	font-size: 1.8rem;
-	margin: 10px 0;
+	font-size: 2rem;
+	margin: 25px 0;
 	color: #707070;
 	cursor: pointer;
 	font-family: 'Acme', sans-serif;
@@ -653,6 +659,14 @@ body {
 
 
 @media screen and (min-width :641px) and (max-width :1024px) {
+	html,
+	body {
+		font-size: 9px;
+	}
+	
+	.indicator{
+		display: none;
+	}
 
 
 	.section_wrap .work > .w-work.swiper-container {
@@ -665,6 +679,10 @@ body {
 		.pro-modal img {
 	width: 100%;
 }
+	
+	.section_wrap .nav .nav_btn{
+		display: block;
+	}
 }
 
 @media screen and (max-width :640px) {
@@ -675,7 +693,7 @@ body {
 	}
 
 
-	.indicator {
+	.indicator{
 		display: none;
 	}
 
@@ -761,6 +779,9 @@ body {
 
 	.section_wrap .contact .con_wrap ul {
 		top: 23%;
+	}
+		.section_wrap .nav .nav_btn{
+		display: block;
 	}
 
 }
