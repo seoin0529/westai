@@ -555,6 +555,7 @@ body {
 .section_wrap .contact {
 	background-color: #f2f2f2;
 	position: relative;
+	background: url("../images/portfolio/page_3/bgi_img.jpg") center center no-repeat;
 }
 
 .section_wrap .contact .con_wrap {
