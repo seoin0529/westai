@@ -1,6 +1,9 @@
 
 
 $("document").ready(function(){
+	$("a").click(function(e){
+		e.preventDefault();
+	})
 	
 	var typingBool = false; 
 var typingIdx=0; 
@@ -170,6 +173,8 @@ $(".home").ripples({
 	
 $ham_menu.click(function(){
 		a =$(this).index();
+	
+	 $ham_menu.removeClass("active").eq(a).addClass("active");
 		if(time==true){
 			return;
 		}
@@ -228,10 +233,17 @@ $ham_menu.click(function(){
 		$nav_slide =$(".section_wrap .nav .nav_wrap");
 	
 	$nav_btn.click(function(){
-		$nav_slide.fadeToggle(500);
-		$(this).toggleClass("click")
+		$nav_slide.fadeIn(500);
+		$(this).addClass("click")
+		// 네비 화면에 보여질 때 세션 클릭시 기존 네비게이션 종료
+		$(".section").click(function(){
+				$nav_btn.removeClass("click");
+				$nav_slide.fadeOut(500);
+			
+			})
 	})//nav click
 
+	
 	
 //	var $nav_list =$(".home .nav .nav_wrap ul li")
 	
@@ -277,13 +289,24 @@ $ham_menu.click(function(){
 			$pro_btn =$(".section_wrap .profile .pro_wrap .left_wrap .pro_btn span");
 	$pro_btn.click(function(){
 		$pro_modal.slideDown();
+		
+		$('html, body').css({'overflow': 'hidden', 'height': '100%'});
+			$('html, body').on('scroll touchmove mousewheel', function(event) { // 터치무브와 마우스휠 스크롤 방지     
+			event.preventDefault();     
+			event.stopPropagation();    
+			return false; 
+		});
+		
 	})
 	$pro_close.click(function(){
 		$pro_modal.slideUp();
+		
+		$('html, body').css({'overflow': 'auto', 'height': '100%'}); //scroll hidden 해제 
+		$('html,body').off('scroll touchmove mousewheel'); // 터치무브 및 마우스휠 스크롤 가능
 	})
 	
 	
-	var img_src = "images/portfolio/page_3/modal",
+	var img_src = "http://westai.co.kr/images/portfolio/page_3/modal",
 		$modal =$(".con-modal"),
 		$btn_d = $(".m-work.swiper-container .btn.d"), //모바일 디자인가이드
 		$btn_dp =$(".section_wrap .btn.dp"), //pc 디자인가이드
@@ -291,8 +314,17 @@ $ham_menu.click(function(){
 	var content = [img_src+"1.jpg", img_src+"2.jpg", img_src+"3.jpg", img_src+"4.jpg", img_src+"5.jpg",img_src +"5PC.jpg", img_src+"6.jpg",img_src +"6event.jpg"];
 	$btn_d.click(function(){
 		var k =  $btn_d.index(this)
+		$('html, body').css({'overflow': 'hidden', 'height': '100%'});
 		$modal.slideDown();
 		$(".con-modal img").attr("src", content[k])
+		$('html, body').on('scroll touchmove mousewheel', function(event) { // 터치무브와 마우스휠 스크롤 방지     
+			event.preventDefault();     
+			event.stopPropagation();    
+			return false; 
+		});
+
+
+		
 		
 	})
 		$btn_dp.click(function(){
@@ -300,10 +332,18 @@ $ham_menu.click(function(){
 		console.log(a);
 		$modal.slideDown();
 		$(".con-modal img").attr("src", content[a])
+			$('html, body').css({'overflow': 'hidden', 'height': '100%'});
+			$('html, body').on('scroll touchmove mousewheel', function(event) { // 터치무브와 마우스휠 스크롤 방지     
+			event.preventDefault();     
+			event.stopPropagation();    
+			return false; 
+		});
 		
 	})
 	$close_btn.click(function(){
 		$modal.slideUp();
+		$('html, body').css({'overflow': 'auto', 'height': '100%'}); //scroll hidden 해제 
+		$('html,body').off('scroll touchmove mousewheel'); // 터치무브 및 마우스휠 스크롤 가능
 	})
 	
 	//모바일 디자인가이드
