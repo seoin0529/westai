@@ -39,7 +39,7 @@ function typing(){
          setTimeout(function(){
            //1초후에 다시 타이핑 반복 시작
            tyInt = setInterval(typing,100);
-         },1000);
+         },300);
         } else if(liIndex==liLength-1){
           
          //마지막 문장까지 써지면 반복종료
@@ -49,15 +49,15 @@ function typing(){
 }  
 
 	
-$(window).resize(function(){
-	if($(window).width() > 650){
-$(".home").ripples({
-	resolution : 256,
-	perturbance : 0.04
-})	
-}
-})
-	
+//$(window).resize(function(){
+//	if($(window).width() > 650){
+//$(".home").ripples({
+//	resolution : 256,
+//	perturbance : 0.04
+//})	
+//}
+//})
+//	
 
 	
 	
@@ -70,6 +70,7 @@ $(".home").ripples({
 	
 	$indi.eq(0).addClass("active");
 	$indi_line.eq(0).addClass("line");
+	
 	
 	// 각 세션의 위치를 가지고 오기 위해 변수 선언
 	var offset = [];
@@ -127,13 +128,16 @@ $(".home").ripples({
 //			bar.animate(0.8);
 //			bar2.animate(0.8);
 			}, 300)
+		}else{
+			setTimeout(function(){
+				$(".progress > *").remove();
+			},600)
 		}
 		$("html, body").stop().animate({
 			scrollTop : $height * a
 		},1000)
 		
 		$indi.removeClass("active").eq(a).addClass("active");
-	$indi_line.removeClass("line").eq(a).addClass("line");
 	})
 
 	$indi.click(function(){
@@ -164,12 +168,12 @@ $(".home").ripples({
 		
 		
 		$indi.removeClass("active").eq(a).addClass("active");
-	$indi_line.removeClass("line").eq(a).addClass("line");
 		
 		
 		
 	})// click
 	
+
 	
 $ham_menu.click(function(){
 		a =$(this).index();
@@ -201,7 +205,7 @@ $ham_menu.click(function(){
 		
 		
 		$indi.removeClass("active").eq(a).addClass("active");
-	$indi_line.removeClass("line").eq(a).addClass("line");
+	
 	
 	
 	})
@@ -225,23 +229,34 @@ $ham_menu.click(function(){
 			}
 				$("html, body").stop().animate({
 			scrollTop : $height * a
-		},1000)
+		},1000)	
+		$indi.removeClass("active").eq(a).addClass("active");
 		}
 	})
 	
 	var $nav_btn =  $(".section_wrap .nav .nav_btn"),
+		$close_btn =$(".section_wrap .nav .nav_wrap .close-btn"),
 		$nav_slide =$(".section_wrap .nav .nav_wrap");
 	
 	$nav_btn.click(function(){
 		$nav_slide.fadeIn(500);
-		$(this).addClass("click")
+		$(this).addClass("click");
+		$(this).fadeOut(700);
+
 		// 네비 화면에 보여질 때 세션 클릭시 기존 네비게이션 종료
 		$(".section").click(function(){
 				$nav_btn.removeClass("click");
 				$nav_slide.fadeOut(500);
+				$nav_btn.fadeIn();
 			
 			})
 	})//nav click
+	
+	$close_btn.click(function(){
+		$nav_slide.fadeOut(500);
+		$nav_btn.fadeIn();
+		$nav_btn.removeClass("click");
+	})
 
 	
 	
@@ -252,11 +267,11 @@ $ham_menu.click(function(){
 	
 	function progressbar(id, per){
 		var bar = new ProgressBar.Line(id,{
-		strokeWidth : 15,
+		strokeWidth : 18,
 		easing : "easeInOut",
 		duration : 1400,
-		color: "#002157",
-		trailwidth:4
+		color: "#9ebad0",
+		trailwidth:6
 //		trailColor :"#707070"
 	})
 		bar.animate(per);
@@ -265,9 +280,6 @@ $ham_menu.click(function(){
 
 	
 		var swiper = new Swiper(".swiper-container",{
-		autoplay : {
-			delay :5000
-		},
 		slidesPerView :1,
 		spaceBetween : 0,
 		speed :1500,
@@ -301,7 +313,7 @@ $ham_menu.click(function(){
 	$pro_close.click(function(){
 		$pro_modal.slideUp();
 		
-		$('html, body').css({'overflow': 'auto', 'height': '100%'}); //scroll hidden 해제 
+		$('html, body').css({'overflow': 'hidden', 'height': '100%'}); //scroll hidden 해제 
 		$('html,body').off('scroll touchmove mousewheel'); // 터치무브 및 마우스휠 스크롤 가능
 	})
 	
@@ -342,7 +354,7 @@ $ham_menu.click(function(){
 	})
 	$close_btn.click(function(){
 		$modal.slideUp();
-		$('html, body').css({'overflow': 'auto', 'height': '100%'}); //scroll hidden 해제 
+		$('html, body').css({'overflow': 'hidden', 'height': '100%'}); //scroll hidden 해제 
 		$('html,body').off('scroll touchmove mousewheel'); // 터치무브 및 마우스휠 스크롤 가능
 	})
 	
@@ -351,9 +363,9 @@ var $btn_m =$(".section_wrap .btn.m span"),
 	$btn_p =$(".section_wrap .btn.p span"),
 	$btn_pm =$(".section_wrap .btn.pm span"),
 	
-	pc_url=[" http://westai.co.kr/twosome-wireframe.html",
+	pc_url=[" http://westai.co.kr/atwosomeplace.html",
 	"http://westai.co.kr/samsonite.html",
-	"http://westai.co.kr/mcm-moblie.html",
+	"http://westai.co.kr/mcm-mobile.html",
 			"http://westai.co.kr/dior.html"]
 	$btn_m.click(function(){
 		var i = $btn_m.index(this);
@@ -370,7 +382,16 @@ var $btn_m =$(".section_wrap .btn.m span"),
 	
 	
 
+	var $icon_link =$(".section.contact .con_wrap ul li.kakao"),
+		$icon_git =$(".section.contact .con_wrap ul li.git"),
+		icon_url =["https://open.kakao.com/o/s8vix1Tb","https://github.com/seoin0529"];
 	
+	$icon_link.click(function(){
+		window.open(icon_url[0]);
+	})
+	$icon_git.click(function(){
+		window.open(icon_url[1]);
+	})
 	
 	
 	
